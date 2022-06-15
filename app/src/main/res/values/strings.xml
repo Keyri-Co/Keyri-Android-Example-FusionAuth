@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Keyri Android Example FusionAuth</string>
+    <string name="fusion_auth_example_title">FusionAuth Example</string>
+    <string name="fusion_auth">Authenticate with FusionAuth</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+</resources>
