@@ -46,10 +46,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
 
-    implementation "androidx.activity:activity-ktx:1.4.0"
+    implementation "androidx.activity:activity-ktx:1.5.0"
 
     // Okhttp
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
@@ -62,7 +62,8 @@ dependencies {
     implementation 'tech.thdev:flow-call-adapter-factory:1.0.0'
 
     // Keyri
-    implementation 'com.github.Keyri-Co:keyri-android-whitelabel-sdk:0.9.0'
+    implementation 'com.github.Keyri-Co.keyri-android-whitelabel-sdk:keyrisdk:1.0.14'
+    implementation 'com.github.Keyri-Co.keyri-android-whitelabel-sdk:scanner:1.0.14'
 
     // Fusion Auth
     implementation 'io.fusionauth:fusionauth-java-client:1.20.0'

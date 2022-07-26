@@ -15,7 +15,7 @@ import com.keyri.examplefusionauth.ui.credentials.CredentialsActivity.Companion.
 import com.keyri.examplefusionauth.databinding.ActivityMainBinding
 import com.keyri.examplefusionauth.ui.credentials.CredentialsActivity
 import com.keyrico.keyrisdk.Keyri
-import com.keyrico.keyrisdk.ui.auth.AuthWithScannerActivity
+import com.keyrico.scanner.AuthWithScannerActivity
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
