@@ -30,24 +30,13 @@ Open your app's `AndroidManifest.xml` file and add the following permission:
 
 ## Keyri Integration
 
-* Add the JitPack repository to your root build.gradle file:
-
-```groovy
-allprojects {
-    repositories {
-        // ...
-        maven { url "https://jitpack.io" }
-    }
-}
-```
-
-* Add SDK dependency to your build.gradle file and sync project:
+Add SDK dependency to your build.gradle file and sync project:
 
 ```kotlin
 dependencies {
     // ...
-    implementation("com.github.Keyri-Co.keyri-android-whitelabel-sdk:keyrisdk:$latestKeyriVersion")
-    implementation("com.github.Keyri-Co.keyri-android-whitelabel-sdk:scanner:$latestKeyriVersion")
+    implementation("com.keyri:keyrisdk:$latestKeyriVersion")
+    implementation("com.keyri:scanner:$latestKeyriVersion")
 }
 ```
 
