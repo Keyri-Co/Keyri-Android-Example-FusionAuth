@@ -50,8 +50,8 @@ dependencies {
     implementation "androidx.activity:activity-ktx:1.5.1"
 
     // Okhttp
-    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -60,8 +60,8 @@ dependencies {
     implementation 'tech.thdev:flow-call-adapter-factory:1.0.0'
 
     // Keyri
-    implementation 'com.keyri:keyrisdk:1.1.0'
-    implementation 'com.keyri:scanner:1.1.0'
+    implementation 'com.keyri:keyrisdk:1.1.2'
+    implementation 'com.keyri:scanner:1.1.2'
 
     // Fusion Auth
     implementation 'io.fusionauth:fusionauth-java-client:1.20.0'
