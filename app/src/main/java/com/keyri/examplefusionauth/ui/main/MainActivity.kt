@@ -15,7 +15,7 @@ import com.keyri.examplefusionauth.ui.credentials.CredentialsActivity.Companion.
 import com.keyri.examplefusionauth.databinding.ActivityMainBinding
 import com.keyri.examplefusionauth.ui.credentials.CredentialsActivity
 import com.keyrico.keyrisdk.Keyri
-import com.keyrico.scanner.AuthWithScannerActivity
+import com.keyrico.scanner.easyKeyriAuth
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
@@ -77,7 +77,10 @@ class MainActivity : AppCompatActivity() {
                             put("provider", "fusionauth:email_password") // Optional
                             put("timestamp", System.currentTimeMillis()) // Optional
                             put("associationKey", keyri.getAssociationKey(email)) // Optional
-                            put("userSignature", keyri.getUserSignature(email, email)) // Optional
+                            put(
+                                "userSignature",
+                                keyri.generateUserSignature(email, email)
+                            ) // Optional
                         }.toString()
 
                         authenticationStarted = true
@@ -90,12 +93,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun keyriAuth(publicUserId: String?, payload: String) {
-        val intent = Intent(this, AuthWithScannerActivity::class.java).apply {
-            putExtra(AuthWithScannerActivity.APP_KEY, "IT7VrTQ0r4InzsvCNJpRCRpi1qzfgpaj")
-            putExtra(AuthWithScannerActivity.USERNAME, publicUserId)
-            putExtra(AuthWithScannerActivity.PAYLOAD, payload)
-        }
-
-        easyKeyriAuthLauncher.launch(intent)
+        easyKeyriAuth(
+            this,
+            easyKeyriAuthLauncher,
+            "IT7VrTQ0r4InzsvCNJpRCRpi1qzfgpaj",
+            payload,
+            publicUserId
+        )
     }
 }
