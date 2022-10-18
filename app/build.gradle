@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
-
     defaultConfig {
         applicationId "com.keyri.examplefusionauth"
+        namespace 'com.keyri.examplefusionauth'
+
         minSdk 23
         targetSdk 32
+        compileSdk 32
         versionCode 1
         versionName "1.0"
 
@@ -60,7 +61,7 @@ dependencies {
     implementation 'tech.thdev:flow-call-adapter-factory:1.0.0'
 
     // Keyri
-    implementation 'com.keyri:keyri-bom:1.2.0'
+    implementation 'com.keyri:keyri-bom:2.0.3'
     implementation 'com.keyri:keyrisdk'
     implementation 'com.keyri:scanner'
 

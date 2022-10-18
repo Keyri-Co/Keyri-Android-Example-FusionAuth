@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 viewModel.authResponseFlow.collect {
                     it?.takeIf { !authenticationStarted }?.let { authResponse ->
                         val email = authResponse.first
-                        val keyri = Keyri()
+                        val keyri = Keyri(this@MainActivity)
 
                         val payload = JSONObject().apply {
                             put("token", authResponse.second)
