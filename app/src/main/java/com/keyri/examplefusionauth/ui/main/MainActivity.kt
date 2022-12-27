@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 viewModel.authResponseFlow.collect {
                     it?.takeIf { !authenticationStarted }?.let { authResponse ->
                         val email = authResponse.first
-                        val keyri = Keyri(this@MainActivity)
+                        val keyri = Keyri(this@MainActivity, APP_KEY)
 
                         val payload = JSONObject().apply {
                             put("token", authResponse.second)
@@ -93,12 +93,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun keyriAuth(publicUserId: String?, payload: String) {
-        easyKeyriAuth(
-            this,
-            easyKeyriAuthLauncher,
-            "IT7VrTQ0r4InzsvCNJpRCRpi1qzfgpaj",
-            payload,
-            publicUserId
-        )
+        easyKeyriAuth(this, easyKeyriAuthLauncher, APP_KEY, payload, publicUserId)
+    }
+
+    companion object {
+        private const val APP_KEY = "IT7VrTQ0r4InzsvCNJpRCRpi1qzfgpaj"
     }
 }
